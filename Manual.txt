@@ -14,9 +14,9 @@ Program documentation:
 		Software working normally. Oxygen Saturation is below normal level.
 
 	1.5 00-99 Number Color Red (Audio Signal)
-		Software working normally. Oxygen Level Critical. Danger of hypoxia. 
+		Software working normally. Oxygen Level Critical. Danger of hypoxia.
 2. Audio Output
-	
+
 	2.1 Loud sound in 1s intervalls
 		Audio warning for critical oxygen level.
 
@@ -29,10 +29,10 @@ Program documentation:
 
 	2.1 void inputError
 	2.2 void zahlenAusgabe
-		Ein Array welches eine Zahl von 0-9 ausgibt. in einer gewissen farbe. 
+		Ein Array welches eine Zahl von 0-9 ausgibt. in einer gewissen farbe.
 	2.3 void download
 	2.3 void lowOxygen
-	2.4 void lowOxygenAlarm 
+	2.4 void lowOxygenAlarm
 
 3.harwareLibrary.h
 
@@ -40,23 +40,8 @@ Program documentation:
 4.loggingLibrary.h
 
 
+###################################################################################################
+Questions:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 		
-				
+1. Check Input -how? signal + datatype
+2. In testfile.c working version datatrasfer error? cant solve.

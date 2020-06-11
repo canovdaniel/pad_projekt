@@ -6,7 +6,6 @@
 #include "loggingLibrary.h"
 #include "supportFunctionLibrary.h"
 
-
 //CONSTANTS
 #define SIZE 8
 //VARIABLES
@@ -19,6 +18,7 @@
 int main(void) {
 
   //################################################################
+
   //Testing section for numberSplitFunction
   printf("\n");
   printf("######################################\n");
@@ -66,6 +66,11 @@ int main(void) {
         case 3:
           download();
           break;
+        case 4:
+          lowOxygen();
+          break;
+        case 5:
+          lowOxygenAlarm();
         default:
           return 0;
           break;
