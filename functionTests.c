@@ -71,6 +71,9 @@ int main(void) {
           break;
         case 5:
           lowOxygenAlarm();
+          break;
+        case 6:
+          zahlenAusgabe(88);
         default:
           return 0;
           break;

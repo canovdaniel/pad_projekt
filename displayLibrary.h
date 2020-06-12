@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "supportFunctionLibrary.h"
 //definitions
 #define SIZE 8
+//ARRARYS
 
 //functions
 void inputError()
@@ -31,9 +33,7 @@ void inputError()
   }
 }
 
-void zahlenAusgabe()
-{
-  void zahlenAusgabeMark1(int zahl)
+  void zahlenAusgabe(int zahl)
   {
     int zahlLeft;
     int zahlRight;
@@ -140,7 +140,7 @@ void zahlenAusgabe()
     printf("Error! Falsche eingabe!\n");
   }
 
-
+  //Ausgabe der fertigen Matrix
   for (size_t l = 0; l < 3; l++) {
     for (size_t m = 0; m < SIZE; m++) {
       printf("%c", ledMatrix[l][m]);
@@ -168,7 +168,7 @@ void zahlenAusgabe()
   }
 
   }
-}
+
 
 void download()
 {
@@ -194,6 +194,7 @@ void download()
 
 void lowOxygen()
 {
+    //Array definieren
   char ledMatrixLowOxygen[SIZE][SIZE] =
   {
     {'-','-','-','-','-','-','-','-'},
@@ -205,6 +206,7 @@ void lowOxygen()
     {'-','O','-','-','-','O','-','O'},
     {'-','O','O','O','-','O','O','O'}
 };
+    //Array ausgeben
     for (size_t i = 0; i < SIZE; i++) {
       for (size_t j = 0; j < SIZE; j++) {
         printf("%c", ledMatrixLowOxygen[i][j]);
@@ -217,6 +219,7 @@ void lowOxygen()
 
 void lowOxygenAlarm()
 {
+  //Array definieren
   char ledMatrixLowOxygen[SIZE][SIZE] =
   {
     {'R','R','R','R','R','R','R','R'},
@@ -228,6 +231,7 @@ void lowOxygenAlarm()
     {'R','R','-','-','-','-','R','R'},
     {'R','R','R','R','R','R','R','R'}
 };
+  //Array Ausgeben
     for (size_t i = 0; i < SIZE; i++) {
       for (size_t j = 0; j < SIZE; j++) {
         printf("%c", ledMatrixLowOxygen[i][j]);
@@ -237,5 +241,6 @@ void lowOxygenAlarm()
     }
 }
 
+//Ende Library
 #define displayLibrary
 #endif
