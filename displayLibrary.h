@@ -35,6 +35,7 @@ void inputError()
 
   void zahlenAusgabe(int zahl)
   {
+    
     int zahlLeft;
     int zahlRight;
     char leftArray[5][3];
@@ -69,73 +70,155 @@ void inputError()
     numberSplitFunction(zahl);
     zahlLeft =+ splitArray[0];
     zahlRight =+ splitArray[1];
+    int *ptrL;
+    int *ptrR;
 
   //Switch for left nummber
   switch (zahlLeft) {
   case 0:
-    leftArray[5][3] =+ displayNumberZero[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberZero[i][j];
+      }
+    }
     break;
   case 1:
-    leftArray[5][3] =+ displayNumberOne[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberOne[i][j];
+      }
+    }
     break;
   case 2:
-    leftArray[5][3] =+ displayNumberTwo[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberTwo[i][j];
+      }
+    }
     break;
   case 3:
-    leftArray[5][3] =+ displayNumberThree[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberThree[i][j];
+      }
+    }
     break;
   case 4:
-    leftArray[5][3] =+ displayNumberFour[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberFour[i][j];
+      }
+    }
     break;
   case 5:
-    leftArray[5][3] =+ displayNumberFive[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberFive[i][j];
+      }
+    }
     break;
   case 6:
-    leftArray[5][3] =+ displayNumberSix[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberSix[i][j];
+      }
+    }
     break;
   case 7:
-    leftArray[5][3] =+ displayNumberSeven[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberSeven[i][j];
+      }
+    }
     break;
   case 8:
-    leftArray[5][3] =+ displayNumberEight[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberEight[i][j];
+      }
+    }
     break;
   case 9:
-    leftArray[5][3] =+ displayNumberNine[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        leftArray[i][j] = displayNumberNine[i][j];
+      }
+    }
   default:
     printf("Error! Falsche eingabe!\n");
   }
 
   //Switch for right nummber
-  switch (zahlLeft) {
-  case 0:
-    rightArray[5][3] =+ displayNumberZero[5][3];
+  switch (zahlRight) {
+    case 0:
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberZero[i][j];
+      }
+    }
     break;
   case 1:
-    rightArray[5][3] =+ displayNumberOne[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberOne[i][j];
+      }
+    }
     break;
   case 2:
-    rightArray[5][3] =+ displayNumberTwo[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberTwo[i][j];
+      }
+    }
     break;
   case 3:
-    rightArray[5][3] =+ displayNumberThree[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberThree[i][j];
+      }
+    }
     break;
   case 4:
-    rightArray[5][3] =+ displayNumberFour[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberFour[i][j];
+      }
+    }
     break;
   case 5:
-    rightArray[5][3] =+ displayNumberFive[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberFive[i][j];
+      }
+    }
     break;
   case 6:
-    rightArray[5][3] =+ displayNumberSix[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberSix[i][j];
+      }
+    }
     break;
   case 7:
-    rightArray[5][3] =+ displayNumberSeven[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberSeven[i][j];
+      }
+    }
     break;
   case 8:
-    rightArray[5][3] =+ displayNumberEight[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberEight[i][j];
+      }
+    }
     break;
   case 9:
-    rightArray[5][3] =+ displayNumberNine[5][3];
+    for (size_t i = 0; i < 5; i++) {
+      for (size_t j = 0; j < 3; j++) {
+        rightArray[i][j] = displayNumberNine[i][j];
+      }
+    }
   default:
     printf("Error! Falsche eingabe!\n");
   }
@@ -166,7 +249,6 @@ void inputError()
     }
     printf("\n");
   }
-
   }
 
 
