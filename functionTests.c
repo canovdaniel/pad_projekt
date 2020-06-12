@@ -1,20 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+#include <unistd.h>
 #include "displayLibrary.h"
 #include "hardwareLibrary.h"
 #include "loggingLibrary.h"
 #include "supportFunctionLibrary.h"
 
+//STRUCTURES
+typedef struct
+{
+  int hour;
+  int min;
+  int sec;
+} Time;
+
+typedef struct
+{
+  Time time;
+  int spO2;
+  int altitude;
+} Logg;
 //CONSTANTS
 #define SIZE 8
+#define LOG 10
 //VARIABLES
 int a;
 //ARRAYS
+Logg array[10];
+int Sp20Array[] = {80,82,83,84,85,86,85,84,85,86};
 
 //PROTOTYPES
 void numberSplitFunctionTest();
 void displayLibraryTest();
+void clockArray();
 
 int main(void) {
   while (1) {
@@ -24,7 +44,9 @@ int main(void) {
   printf("What function or library would you like to test?\n");
   printf("[1] numberSplitFunction\n");
   printf("[2] displayLibrary\n");
+  printf("[3] clockArray\n");
   printf("[Other number] = EXIT\n");
+  printf("######################################\n");
   scanf("%d", &a);
     switch (a) {
       case 1:
@@ -32,6 +54,9 @@ int main(void) {
         break;
       case 2:
         displayLibraryTest();
+        break;
+      case 3:
+        clockArray();
         break;
       default:
         return 0;
@@ -106,4 +131,44 @@ void numberSplitFunctionTest() {
     printf("\n");
     printf("######################################\n");
     printf("\n");
+}
+
+void clockArray() {
+
+  int index = 0;
+  int h;
+  int m;
+  int s;
+  for (size_t i = 0; i < LOG; i++)
+  {
+    sleep(1);
+    time_t s, val = 1;
+    struct tm* current_time;
+    s = time(NULL);
+    current_time = localtime(&s);
+
+    printf("[%d] %02d:%02d:%02d\n",
+           index,
+           current_time->tm_hour,
+           current_time->tm_min,
+           current_time->tm_sec);
+
+           h =+ current_time->tm_hour;
+           m =+ current_time->tm_min;
+           s =+ current_time->tm_sec;
+
+           array[index].time.hour = h;
+           array[index].time.min = m;
+           array[index].time.sec = s;
+    index++;
+  }
+  printf("--FLIGHT LOGG--\n");
+  printf("################################\n");
+  printf("[Time]       [SpO2]        [QNH]\n");
+  printf("--------------------------------\n");
+  for (size_t i = 0; i < LOG; i++) {
+      printf("%02d:%02d:%02d  --  ", array[i].time);
+      printf("%d%%  --    ", Sp20Array[i]);
+      printf("N/A\n");
+  }
 }
